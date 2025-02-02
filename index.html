@@ -2,17 +2,46 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>副業おみくじ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2em;
+            color: #4CAF50;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultArea {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
     <h1>副業おみくじ 🎲</h1>
+    <p>ボタンを押して、あなたにぴったりの副業を占いましょう！</p>
     <button id="omikujiButton">副業を占う 🔮</button>
     <div id="resultArea"></div>
 
-    <audio id="omikujiSound">
-        <source src="omikuji-sound.mp3" type="audio/mpeg">
-    </audio>
-
+    <!-- JavaScriptファイルを読み込む -->
     <script src="script.js"></script>
 </body>
 </html>
