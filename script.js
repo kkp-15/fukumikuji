@@ -1,4 +1,5 @@
 document.getElementById("omikujiButton").addEventListener("click", function() {
+    // 副業リストと説明
     const sideJobs = [
         { name: "せどり", emoji: "💰", description: "安く仕入れて高く売るビジネス。" },
         { name: "アフィリエイトブログ", emoji: "💻", description: "ブログ運営で広告収入を得る副業。" },
@@ -21,7 +22,7 @@ document.getElementById("omikujiButton").addEventListener("click", function() {
     // ランダムに副業を選択
     const randomJob = sideJobs[Math.floor(Math.random() * sideJobs.length)];
 
-    // 結果表示
+    // 結果表示用HTML
     let resultHTML = `
         <p>あなたにおすすめの副業は「<strong>${randomJob.name}</strong>」${randomJob.emoji}です！</p>
         <p>${randomJob.description}</p>
@@ -46,5 +47,6 @@ document.getElementById("omikujiButton").addEventListener("click", function() {
         `;
     }
 
+    // 結果エリアに表示
     document.getElementById("resultArea").innerHTML = resultHTML;
 });
