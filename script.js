@@ -1,81 +1,22 @@
 document.getElementById("omikujiButton").addEventListener("click", function() {
-    // 副業リストとアフィリエイトリンク
+    // 副業リストと説明
     const sideJobs = [
-        { 
-            name: "せどり", 
-            description: "商品を安く仕入れて高く売るビジネス。", 
-            link: "https://affiliate.rakuten.co.jp/example-sedori" 
-        },
-        { 
-            name: "アフィリエイトブログ", 
-            description: "ブログで収益化を目指すストック型副業。", 
-            link: "https://affiliate.rakuten.co.jp/example-blog" 
-        },
-        { 
-            name: "Webライター", 
-            description: "文章力を活かして記事作成で稼ぐ仕事。", 
-            link: "https://affiliate.rakuten.co.jp/example-writer" 
-        },
-        { 
-            name: "オンライン秘書", 
-            description: "リモートで事務作業やスケジュール管理を行う仕事。", 
-            link: "https://affiliate.rakuten.co.jp/example-secretary" 
-        },
-        { 
-            name: "Webデザイン", 
-            description: "ホームページやバナーのデザイン制作。", 
-            link: "https://affiliate.rakuten.co.jp/example-design" 
-        },
-        { 
-            name: "プログラミング", 
-            description: "アプリやシステム開発で高収入を狙えるスキル。", 
-            link: "https://affiliate.rakuten.co.jp/example-programming" 
-        },
-        { 
-            name: "LINE構築", 
-            description: "LINE公式アカウントの運用やシステム構築。", 
-            link: "https://affiliate.rakuten.co.jp/example-line" 
-        },
-        { 
-            name: "動画編集", 
-            description: "YouTubeや広告動画の編集で稼ぐ仕事。", 
-            link: "https://affiliate.rakuten.co.jp/example-video" 
-        },
-        { 
-            name: "YouTube", 
-            description: "動画配信で広告収入を得る副業。趣味を活かせます。", 
-            link: "https://affiliate.rakuten.co.jp/example-youtube" 
-        },
-        { 
-            name: "ライバー", 
-            description: "ライブ配信で視聴者から投げ銭をもらう仕事。", 
-            link: "https://affiliate.rakuten.co.jp/example-liver" 
-        },
-        { 
-            name: "Instagram運用", 
-            description: "SNSマーケティングやアカウント運用代行。", 
-            link: "https://affiliate.rakuten.co.jp/example-instagram" 
-        },
-        { 
-            name: "コンテンツ販売", 
-            description: "デジタル商品やノウハウを販売する仕事。", 
-            link: "https://affiliate.rakuten.co.jp/example-content" 
-        },
-        { 
-            name: "ハンドメイド", 
-            description: "手作りアイテムを販売して収益化する副業。", 
-            link: "https://affiliate.rakuten.co.jp/example-handmade" 
-        },
-        { 
-            name: "コンサルタント",  
-            description: "専門知識を活かしてアドバイスを提供する仕事。",  
-            link: "https://affiliate.rakuten.co.jp/example-consultant"  
-        },
-        {  
-            name: "転職サポート",  
-            description: "求職者と企業をつなぐサポート業務。",  
-            link: "https://affiliate.rakuten.co.jp/example-career"  
-        }
+        { name: "せどり", description: "安く仕入れて高く売るビジネス。" },
+        { name: "アフィリエイトブログ", description: "ブログ運営で広告収入を得る副業。" },
+        { name: "Webライター", description: "記事執筆で収益化する仕事。" },
+        { name: "オンライン秘書", description: "リモートで秘書業務を行う仕事。" },
+        { name: "Webデザイン", description: "Webサイトのデザインや構築を行う仕事。" },
+        { name: "プログラミング", description: "ソフトウェアやアプリの開発で稼ぐ仕事。" },
+        { name: "LINE構築", description: "LINE公式アカウントの構築・運営代行。" },
+        { name: "動画編集", description: "動画のカットや字幕追加などの編集作業。" },
+        { name: "YouTube", description: "動画配信で視聴者を獲得し収益化する仕事。" },
+        { name: "ライバー", description: "ライブ配信で視聴者と交流し収益化する仕事。" },
+        { name: "SNS/SNS運用代行", description: "SNS投稿や運用代行で収益化する仕事。" },
+        { name: "コンテンツ販売", description: "デジタル商品の制作・販売で稼ぐ仕事。" },
+        { name: "ハンドメイド", description: "手作り品を制作・販売して収益化する仕事。" },
+        { name: "スキル販売", description: "家事代行やスポーツ指導などスキルを活かす仕事。" },
+        { name: "コンサル", description: "専門知識を提供し個人や企業を支援する仕事。" },
+        { name: "Webマーケティング", description: "集客や販売促進のサポートを行う仕事。" }
     ];
 
     // ランダムに副業を選択
@@ -85,6 +26,5 @@ document.getElementById("omikujiButton").addEventListener("click", function() {
     document.getElementById("resultArea").innerHTML = `
         <p>あなたにおすすめの副業は「<strong>${randomJob.name}</strong>」です！</p>
         <p>${randomJob.description}</p>
-        <a href="${randomJob.link}" target="_blank">詳細はこちら</a>
     `;
 });
