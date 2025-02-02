@@ -18,10 +18,25 @@ document.getElementById("omikujiButton").addEventListener("click", function() {
         { name: "Webマーケティング", emoji: "📈", description: "集客や販売促進のサポートを行う仕事。" }
     ];
 
+    // ランダムに副業を選択
     const randomJob = sideJobs[Math.floor(Math.random() * sideJobs.length)];
 
-    document.getElementById("resultArea").innerHTML = `
+    // 結果表示
+    let resultHTML = `
         <p>あなたにおすすめの副業は「<strong>${randomJob.name}</strong>」${randomJob.emoji}です！</p>
         <p>${randomJob.description}</p>
     `;
+
+    // プログラミングが選ばれた場合にリンクを追加
+    if (randomJob.name === "プログラミング") {
+        resultHTML += `
+            <div class="link-container">
+                <a href="https://www.daily-trial.com/" target="_blank">
+                    今すぐプログラミングを学ぶ！✨
+                </a>
+            </div>
+        `;
+    }
+
+    document.getElementById("resultArea").innerHTML = resultHTML;
 });
