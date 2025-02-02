@@ -27,13 +27,21 @@ document.getElementById("omikujiButton").addEventListener("click", function() {
         <p>${randomJob.description}</p>
     `;
 
-    // プログラミングが選ばれた場合にリンクを追加
+    // プログラミングが選ばれた場合
     if (randomJob.name === "プログラミング") {
         resultHTML += `
             <div class="link-container">
                 <a href="https://www.daily-trial.com/" target="_blank">
                     今すぐプログラミングを学ぶ！✨
                 </a>
+            </div>
+        `;
+    } else {
+        // 他の副業が選ばれた場合
+        resultHTML += `
+            <div class="link-container">
+                <p>他にも多くの副業があります！ぜひ挑戦してみてください。</p>
+                <a href="#" style="background-color:#4CAF50; color:white;">副業についてもっと知る</a>
             </div>
         `;
     }
