@@ -5,7 +5,7 @@ document.getElementById("omikujiButton").addEventListener("click", function() {
             name: "せどり", 
             emoji: "💰", 
             description: "安く仕入れて高く売るビジネス。",
-            linkText: "せどりの始め方はこちら！",
+            linkText: "せどり関連のおすすめ動画はこちら！",
             linkURL: "https://youtube.com/playlist?list=PLpwLNivKud-gkR8BXDy9_EgKfOB7E0XAw&si=Fz-snqdvZjPvCl-Q"
         },
         { 
@@ -41,7 +41,7 @@ document.getElementById("omikujiButton").addEventListener("click", function() {
         <p>${randomJob.description}</p>
     `;
 
-    // アフィリエイトリンクを追加
+    // アフィリエイトリンクまたは関連リンクを追加
     resultHTML += `
         <div class="link-container">
             <a href="${randomJob.linkURL}" target="_blank">${randomJob.linkText}</a>
