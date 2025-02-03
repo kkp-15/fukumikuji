@@ -12,8 +12,8 @@ document.getElementById("omikujiButton").addEventListener("click", function() {
             name: "アフィリエイトブログ", 
             emoji: "💻", 
             description: "ブログ運営で広告収入を得る副業。",
-            linkText: "ブログ運営のコツはこちら！",
-            linkURL: "#"
+            linkText: "ブログのおすすめ動画はこちら！",
+            linkURL: "https://youtube.com/playlist?list=PLpwLNivKud-gAJAgveJjARv5M4uAVrQHK&si=DZVOdRb7xJ0zJ1Vc"
         },
         { 
             name: "Webライター", 
