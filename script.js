@@ -1,3 +1,10 @@
+document.getElementById("omikuji-button").addEventListener("click", function() {
+    let fortunes = ["アフィリエイトブログ", "Webライター", "オンライン秘書", "Webデザイン", "プログラミング", "LINE構築"];
+    let randomIndex = Math.floor(Math.random() * fortunes.length);
+    let result = fortunes[randomIndex];
+    showResult(result);
+});
+
 function showResult(result) {
     let resultElement = document.getElementById("result");
     let affiliateBanner = document.getElementById("affiliate-banner");
