@@ -7,12 +7,21 @@ function drawFortune() {
 }
 
 function showResult(result) {
-    document.getElementById("result").textContent = result;
+    let resultElement = document.getElementById("result");
+    let affiliateBanner = document.getElementById("affiliate-banner");
 
-    // 「プログラミング」の場合だけアフィリエイトを表示
+    // 結果を画面に表示
+    resultElement.textContent = result;
+
+    // 「プログラミング」が出たらアフィリエイトを表示、それ以外は非表示
     if (result === "プログラミング") {
-        document.getElementById("affiliate-banner").style.display = "block";
+        affiliateBanner.style.display = "block";
     } else {
-        document.getElementById("affiliate-banner").style.display = "none";
+        affiliateBanner.style.display = "none";
     }
 }
+
+// 初回ページ読み込み時にアフィリエイトを非表示にする（予防策）
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("affiliate-banner").style.display = "none";
+});
