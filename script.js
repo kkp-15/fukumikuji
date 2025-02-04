@@ -12,6 +12,10 @@ function showResult(result) {
 
     // 結果を画面に表示
     resultElement.textContent = result;
+    resultElement.classList.remove("show"); // アニメーション用
+    setTimeout(() => {
+        resultElement.classList.add("show"); // アニメーション開始
+    }, 100);
 
     // 「プログラミング」が出たらアフィリエイトを表示、それ以外は非表示
     if (result === "プログラミング") {
