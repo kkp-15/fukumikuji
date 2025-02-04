@@ -6,61 +6,57 @@
     <title>副業おみくじ</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             text-align: center;
-            margin: 0;
-            padding: 0;
-            background: url('https://source.unsplash.com/1600x900/?japan,temple') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
+            background-color: #f8f8f8;
+            padding: 20px;
         }
         h1 {
-            margin-top: 20px;
-            font-size: 36px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            color: #333;
         }
-        button {
-            background-color: #ffcc00;
-            border: none;
-            padding: 15px 30px;
+        #omikuji-button {
+            padding: 10px 20px;
             font-size: 20px;
-            font-weight: bold;
-            border-radius: 10px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            margin-top: 20px;
             transition: 0.3s;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
-        button:hover {
-            background-color: #ff9900;
+        #omikuji-button:hover {
+            background-color: #ff3300;
         }
         #result {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
-            margin-top: 30px;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.8);
-            color: #333;
-            display: inline-block;
-            border-radius: 10px;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
             opacity: 0;
-            transform: scale(0.5);
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: scale(0.8);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
-        .show {
-            opacity: 1 !important;
-            transform: scale(1) !important;
+        #result.show {
+            opacity: 1;
+            transform: scale(1);
         }
         #affiliate-banner {
             display: none;
             margin-top: 20px;
+            padding: 15px;
+            background: linear-gradient(45deg, #ff6600, #ff3300);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.5s ease-in-out;
         }
         .affiliate-btn {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #ff6600;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #ff3300;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
@@ -68,27 +64,21 @@
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
         .affiliate-btn:hover {
-            background-color: #cc5500;
+            background-color: #ffcc00;
+            color: #000;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
         }
     </style>
 </head>
 <body>
-
     <h1>副業おみくじ</h1>
-    <button onclick="drawFortune()">おみくじを引く</button>
-
+    <button id="omikuji-button">おみくじを引く</button>
     <div id="result"></div>
+    <div id="affiliate-banner"></div>
 
-    <!-- アフィリエイトバナー（プログラミングが出たときだけ表示） -->
-    <div id="affiliate-banner">
-        <a href="https://px.a8.net/svt/ejp?a8mat=44YP7J+ESUZ76+5IZ2+5YRHE" rel="nofollow" target="_blank" class="affiliate-btn">
-            『デイトラ』で仕事につながるWebスキルを身につけよう！
-        </a>
-        <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=44YP7J+ESUZ76+5IZ2+5YRHE" alt="">
-    </div>
-
-    <!-- script.js を読み込む -->
     <script src="script.js"></script>
-
 </body>
 </html>
