@@ -8,55 +8,47 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 20px;
+            margin: 20px;
         }
-        h1 {
-            font-size: 2em;
-            color: #4CAF50;
-        }
-        button {
-            font-size: 1.2em;
-            padding: 10px 20px;
-            color: #fff;
-            background-color: #4CAF50;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        #resultArea {
-            margin-top: 20px;
-            font-size: 1.5em;
-        }
-        .link-container {
+        #result {
+            font-size: 24px;
+            font-weight: bold;
             margin-top: 20px;
         }
-        .link-container a {
+        #affiliate-banner {
+            display: none;
+            margin-top: 20px;
+        }
+        .affiliate-btn {
             display: inline-block;
-            text-decoration: none;
-            background-color: #ff9800;
-            color: white;
             padding: 10px 20px;
+            background-color: #ff6600;
+            color: #ffffff;
+            text-decoration: none;
             border-radius: 5px;
-            font-size: 1.2em;
+            font-weight: bold;
         }
-        .link-container a:hover {
-            background-color: #e68900;
+        .affiliate-btn:hover {
+            background-color: #cc5500;
         }
     </style>
 </head>
 <body>
-    <h1>副業おみくじ 🎲</h1>
-    <p>ボタンを押して、あなたにぴったりの副業を占いましょう！</p>
-    <button id="omikujiButton">副業を占う 🔮</button>
-    <div id="resultArea"></div>
 
-    <!-- JavaScriptファイルを読み込む -->
+    <h1>副業おみくじ</h1>
+    <button onclick="drawFortune()">おみくじを引く</button>
+
+    <div id="result"></div>
+
+    <!-- アフィリエイトバナー（プログラミングが出たときだけ表示） -->
+    <div id="affiliate-banner">
+        <a href="https://px.a8.net/svt/ejp?a8mat=44YP7J+ESUZ76+5IZ2+5YRHE" rel="nofollow" target="_blank" class="affiliate-btn">
+            『デイトラ』で仕事につながるWebスキルを身につけよう！
+        </a>
+        <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=44YP7J+ESUZ76+5IZ2+5YRHE" alt="">
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 </html>
