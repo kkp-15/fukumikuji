@@ -6,50 +6,12 @@
     <title>副業おみくじ</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background: url('https://source.unsplash.com/1600x900/?japan,temple') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
         }
-        #result {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        #affiliate-banner {
-            display: none;
-            margin-top: 20px;
-        }
-        .affiliate-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #ff6600;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .affiliate-btn:hover {
-            background-color: #cc5500;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>副業おみくじ</h1>
-    <button onclick="drawFortune()">おみくじを引く</button>
-
-    <div id="result"></div>
-
-    <!-- アフィリエイトバナー（プログラミングが出たときだけ表示） -->
-    <div id="affiliate-banner">
-        <a href="https://px.a8.net/svt/ejp?a8mat=44YP7J+ESUZ76+5IZ2+5YRHE" rel="nofollow" target="_blank" class="affiliate-btn">
-            『デイトラ』で仕事につながるWebスキルを身につけよう！
-        </a>
-        <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=44YP7J+ESUZ76+5IZ2+5YRHE" alt="">
-    </div>
-
-    <!-- script.js を読み込む -->
-    <script src="script.js"></script>
-
-</body>
-</html>
+        h1 {
